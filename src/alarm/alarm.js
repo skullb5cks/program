@@ -1,8 +1,8 @@
-var makeClock = function() {
+var clock = function() {
     var date = new Date();
 
     function _getTime() {
-        return [date.getHours(), date.getMinutes(), date.getSeconds()].join(':');
+        return [date.getHours(), date.getMinutes(), date.getSeconds(), date.getMilliseconds()].join(':');
     }
 
     return {
@@ -10,24 +10,44 @@ var makeClock = function() {
     };
 };
 
-var store = function() {
-    function _subscribe() {
+var timer = function(interval, func) {
+    function _setTimeout() {
 
     }
 
-    function _publish() {
+    function _getCurrentInterval() {
 
     }
 
     return {
-        subscribe: _subscribe,
-        publish: _publish,
+        setTimeout: _setTimeout,
+        getCurrentInterval: _getCurrentInterval
+    }
+};
+
+var reservation = function(hour, minutes) {
+    var time = {};
+
+    function _setTime() {
+
+    }
+
+    function _getTimeTable() {
+
+    }
+
+    return {
+        setTime: _setTime,
+        getTimeTable: _getTimeTable
     }
 };
 
 
-var clock = new makeClock();
-console.log(clock.getTime());
+// var co = new clock();
+
+
+
+
 
 
 if (module.hot) {
