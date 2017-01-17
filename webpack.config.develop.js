@@ -4,10 +4,11 @@ var webpack = require("webpack");
 module.exports = {
     devtool: 'eval',
     entry:    {
-        alarm: [
+        test: [
             'webpack/hot/dev-server',
             'webpack-hot-middleware/client',
-            './src/alarm/alarm.js'
+            // './src/alarm/alarm.js',
+            './src/state/createState.js'
         ]
     },
     output: {
